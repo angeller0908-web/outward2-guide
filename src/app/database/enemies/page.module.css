@@ -1,0 +1,377 @@
+.page {
+  padding-top: var(--space-12);
+  min-height: calc(100vh - var(--navbar-height));
+  background: var(--bg-main);
+  color: var(--text-primary);
+}
+
+.header {
+  padding: var(--space-8) var(--space-6);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.title {
+  font-size: var(--text-3xl);
+  margin-bottom: var(--space-2);
+}
+
+.titleAccent {
+  color: var(--primary);
+}
+
+.subtitle {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  padding: 0 var(--space-6) var(--space-6);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.searchBox {
+  flex: 1;
+  min-width: 250px;
+  position: relative;
+}
+
+.searchInput {
+  width: 100%;
+  padding: var(--space-3) var(--space-4) var(--space-3) var(--space-10);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  outline: none;
+  transition: border-color var(--transition-fast);
+}
+
+.searchInput::placeholder {
+  color: var(--text-tertiary);
+}
+
+.searchInput:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px var(--primary-glow);
+}
+
+.searchIcon {
+  position: absolute;
+  left: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-tertiary);
+}
+
+.filterGroup {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.filterSelect {
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  outline: none;
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238B949E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+}
+
+.filterSelect:focus {
+  border-color: var(--primary);
+}
+
+/* Enemies grid */
+.enemiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: var(--space-6);
+  padding: 0 var(--space-6) var(--space-16);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Card styling */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+}
+
+.cardBoss {
+  border-color: rgba(210, 153, 34, 0.4);
+  background: radial-gradient(circle at top right, rgba(210, 153, 34, 0.05), var(--bg-card));
+}
+
+.cardBoss:hover {
+  border-color: var(--primary);
+  box-shadow: 0 0 15px rgba(210, 153, 34, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.enemyTitle {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.enemyTypeBadge {
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.05em;
+  display: inline-block;
+  margin-top: var(--space-1);
+}
+
+.badgeCommon {
+  background: rgba(139, 148, 158, 0.1);
+  color: #8b949e;
+  border: 1px solid rgba(139, 148, 158, 0.2);
+}
+
+.badgeElite {
+  background: rgba(88, 166, 255, 0.1);
+  color: #58a6ff;
+  border: 1px solid rgba(88, 166, 255, 0.2);
+}
+
+.badgeBoss {
+  background: rgba(210, 153, 34, 0.1);
+  color: var(--primary);
+  border: 1px solid rgba(210, 153, 34, 0.2);
+}
+
+.difficultyStars {
+  display: flex;
+  gap: 2px;
+  color: var(--primary);
+  font-size: var(--text-sm);
+}
+
+/* Stats */
+.statsRow {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  font-size: var(--text-xs);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: var(--space-2) 0;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--space-1) * 1.5);
+  color: var(--text-secondary);
+}
+
+.statValue {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Locations */
+.locations {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
+
+.locationTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: calc(var(--space-1) * 1.5);
+  margin-top: var(--space-1);
+}
+
+.locationTag {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+/* Elemental Vulnerabilities */
+.vulnerabilities {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+  font-size: var(--text-xs);
+}
+
+.elementGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.elementTitle {
+  color: var(--text-tertiary);
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.elementTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.elementTag {
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* Elemental Colors */
+.elemPhysical {
+  background: rgba(139, 148, 158, 0.15);
+  color: #c9d1d9;
+}
+.elemFire {
+  background: rgba(255, 123, 114, 0.15);
+  color: #ff7b72;
+}
+.elemIce {
+  background: rgba(88, 166, 255, 0.15);
+  color: #58a6ff;
+}
+.elemLightning {
+  background: rgba(242, 211, 89, 0.15);
+  color: #f2d359;
+}
+.elemEthereal {
+  background: rgba(187, 128, 250, 0.15);
+  color: #bb80fa;
+}
+.elemDecay {
+  background: rgba(56, 220, 120, 0.15);
+  color: #38dc78;
+}
+
+.elemNone {
+  color: var(--text-tertiary);
+  font-style: italic;
+}
+
+/* Drops Box */
+.dropsBox {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  font-size: var(--text-xs);
+}
+
+.dropsTitle {
+  font-size: 10px;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: calc(var(--space-1) * 1.5);
+  display: block;
+}
+
+.dropsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.dropItem {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-primary);
+}
+
+.dropChance {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Strategy */
+.strategyBox {
+  background: rgba(210, 153, 34, 0.03);
+  border-left: 3px solid var(--primary);
+  padding: var(--space-3);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: var(--text-xs);
+  line-height: 1.5;
+}
+
+.strategyTitle {
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: var(--space-1);
+  display: block;
+}
+
+.strategyText {
+  color: var(--text-secondary);
+}
+
+.description {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  line-height: 1.4;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .enemiesGrid {
+    grid-template-columns: 1fr;
+  }
+}
