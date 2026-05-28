@@ -3,9 +3,9 @@ import styles from './Footer.module.css';
 
 const quickLinks = [
   { label: 'Home', href: '/' },
-  { label: 'Getting Started', href: '/guides/getting-started' },
-  { label: 'FAQ', href: '/faq' },
-  { label: 'Changelog', href: '/changelog' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
+  { label: 'Privacy Policy', href: '/privacy' },
 ];
 
 const guideLinks = [
