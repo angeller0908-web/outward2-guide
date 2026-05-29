@@ -3,6 +3,20 @@ import path from 'path';
 import matter from 'gray-matter';
 
 const newsDirectory = path.join(process.cwd(), 'src/content/news');
+  function formatDate(value: unknown, fallback: string): string {
+    if (value instanceof Date) {
+      return value.toISOString().split('T')[0];
+    }
+    if (typeof value === 'string') {
+      return value;
+    }
+    if (value) {
+      return String(value);
+    }
+    return fallback;
+  }
+
+
 
 export interface NewsPost {
   slug: string;
@@ -47,7 +61,7 @@ export function getAllNews(): NewsPost[] {
 
       // If no date, use file creation/modified time or a fallback
       const stat = fs.statSync(fullPath);
-      const date = matterResult.data.date || stat.mtime.toISOString().split('T')[0];
+      const date = formatDate(matterResult.data.date, stat.mtime.toISOString().split('T')[0]);
 
       return {
         slug,
@@ -75,7 +89,7 @@ export function getNewsBySlug(slug: string): NewsPost | null {
   }
 
   const stat = fs.statSync(fullPath);
-  const date = matterResult.data.date || stat.mtime.toISOString().split('T')[0];
+  const date = formatDate(matterResult.data.date, stat.mtime.toISOString().split('T')[0]);
 
   return {
     slug,
