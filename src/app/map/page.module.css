@@ -1,91 +1,354 @@
+/* ============================================================
+   Map Page — Region Explorer
+   ============================================================ */
+
 .page {
-  padding-top: var(--space-12);
-  min-height: calc(100vh - var(--navbar-height));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: radial-gradient(circle at center, rgba(196, 168, 98, 0.05), var(--bg-main));
-  padding-left: var(--space-6);
-  padding-right: var(--space-6);
+  padding: 3rem 1.5rem 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.card {
-  max-width: 600px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-default);
-  border-radius: var(--radius-lg);
-  padding: var(--space-8);
+/* ---- Header ---- */
+
+.header {
   text-align: center;
-  box-shadow: var(--shadow-lg), var(--shadow-glow);
-  backdrop-filter: blur(10px);
+  margin-bottom: 3rem;
 }
 
-.icon {
-  font-size: var(--text-5xl);
-  margin-bottom: var(--space-4);
-  display: inline-block;
-  animation: float 4s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+.headerIcon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.75rem;
+  filter: drop-shadow(0 0 12px rgba(232, 180, 76, 0.4));
 }
 
 .title {
-  font-family: var(--font-display);
-  font-size: var(--text-3xl);
-  color: var(--primary);
-  margin-bottom: var(--space-3);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem;
 }
 
-.desc {
-  font-size: var(--text-sm);
+.titleAccent {
+  background: linear-gradient(135deg, var(--accent-gold), var(--accent-fire));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.05rem;
   color: var(--text-secondary);
+  max-width: 640px;
+  margin: 0 auto;
   line-height: 1.6;
-  margin-bottom: var(--space-6);
 }
 
-.features {
+/* ---- Region Grid ---- */
+
+.regionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.regionCard {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  cursor: default;
+}
+
+.regionCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
+  border-color: var(--accent-gold);
+}
+
+/* ---- Card Image ---- */
+
+.regionImageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.regionImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.regionCard:hover .regionImage {
+  transform: scale(1.06);
+}
+
+.regionImageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10, 10, 18, 0.92) 0%, rgba(10, 10, 18, 0.3) 50%, transparent 100%);
+  pointer-events: none;
+}
+
+/* ---- Card Body ---- */
+
+.regionBody {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  z-index: 2;
+}
+
+.regionBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.badgeFrost {
+  background: rgba(100, 180, 255, 0.15);
+  color: #7ec8ff;
+  border: 1px solid rgba(100, 180, 255, 0.25);
+}
+
+.badgeDesert {
+  background: rgba(232, 180, 76, 0.15);
+  color: var(--accent-gold);
+  border: 1px solid rgba(232, 180, 76, 0.25);
+}
+
+.badgeFortress {
+  background: rgba(120, 200, 120, 0.15);
+  color: #8fd68f;
+  border: 1px solid rgba(120, 200, 120, 0.25);
+}
+
+.badgeMystery {
+  background: rgba(180, 120, 255, 0.15);
+  color: #c49cff;
+  border: 1px solid rgba(180, 120, 255, 0.25);
+}
+
+.regionName {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0 0 0.15rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.regionSubname {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 500;
+  margin: 0 0 0.65rem;
+  font-style: italic;
+}
+
+.regionDesc {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.55;
+  margin: 0 0 0.85rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ---- Info Tags ---- */
+
+.regionTags {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-  text-align: left;
-  background: var(--bg-elevated);
-  padding: var(--space-4);
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-subtle);
-  margin-bottom: var(--space-6);
+  flex-wrap: wrap;
+  gap: 0.4rem;
 }
 
-.featureItem {
+.regionTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ---- ArtStation Reference ---- */
+
+.artStationSection {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 16px;
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  margin-bottom: 3rem;
+}
+
+.artStationTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem;
+}
+
+.artStationDesc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0 0 1.25rem;
+  line-height: 1.6;
+}
+
+.artStationLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.artStationLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  background: rgba(232, 180, 76, 0.08);
+  border: 1px solid rgba(232, 180, 76, 0.2);
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.artStationLink:hover {
+  background: rgba(232, 180, 76, 0.15);
+  border-color: var(--accent-gold);
+  transform: translateY(-2px);
+}
+
+/* ---- Coming Soon Banner ---- */
+
+.comingSoon {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(232, 180, 76, 0.06), rgba(232, 100, 50, 0.06));
+  border: 1px solid rgba(232, 180, 76, 0.15);
+}
+
+.comingSoonIcon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.75rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+.comingSoonTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem;
+}
+
+.comingSoonDesc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  max-width: 550px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.6;
+}
+
+.comingSoonFeatures {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.comingSoonFeature {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
-  font-size: var(--text-xs);
-  color: var(--text-primary);
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-weight: 500;
 }
 
 .featureDot {
-  color: var(--primary);
+  color: var(--accent-gold);
+  font-size: 0.7rem;
 }
 
-.backBtn {
-  display: inline-block;
-  padding: var(--space-3) var(--space-6);
-  background: var(--primary);
-  color: var(--text-inverse);
-  font-family: var(--font-display);
-  font-weight: 700;
-  text-transform: uppercase;
-  border-radius: var(--radius-sm);
-  transition: background var(--transition-fast), transform var(--transition-fast);
-  text-decoration: none;
+/* ---- Responsive ---- */
+
+@media (max-width: 768px) {
+  .page {
+    padding: 2rem 1rem 3rem;
+  }
+
+  .title {
+    font-size: 1.65rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .regionGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .regionName {
+    font-size: 1.15rem;
+  }
+
+  .artStationLinks {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .comingSoonFeatures {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
 }
 
-.backBtn:hover {
-  background: var(--primary-light);
-  transform: translateY(-2px);
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .regionBody {
+    padding: 1rem;
+  }
+
+  .regionDesc {
+    -webkit-line-clamp: 2;
+  }
 }
