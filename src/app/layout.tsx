@@ -65,6 +65,13 @@ export default function RootLayout({
           `}
         </Script>
 
+        {/* Google AdSense (Auto Ads) */}
+        <Script
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7103013772082124"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+
         <LayoutShell>
           <main
             style={{
