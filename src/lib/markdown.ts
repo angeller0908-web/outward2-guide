@@ -16,6 +16,17 @@ const newsDirectory = path.join(process.cwd(), 'src/content/news');
     return fallback;
   }
 
+// Normalize the frontmatter `image` value into a usable src.
+// Accepts: "" (none), an absolute URL, a root-relative path ("/images/news/x.webp"),
+// or a bare filename ("auto_x.webp") which is resolved under /images/news/.
+function normalizeImage(value: unknown): string {
+  if (typeof value !== 'string') return '';
+  const v = value.trim();
+  if (!v) return '';
+  if (/^https?:\/\//i.test(v) || v.startsWith('/')) return v;
+  return `/images/news/${v}`;
+}
+
 
 
 export interface NewsPost {
@@ -23,6 +34,7 @@ export interface NewsPost {
   title: string;
   date: string;
   excerpt: string;
+  image: string;
   content: string;
 }
 
@@ -68,6 +80,7 @@ export function getAllNews(): NewsPost[] {
         title,
         date,
         excerpt,
+        image: normalizeImage(matterResult.data.image),
         content: matterResult.content,
       };
     });
@@ -96,6 +109,7 @@ export function getNewsBySlug(slug: string): NewsPost | null {
     title,
     date,
     excerpt: matterResult.data.excerpt || '',
+    image: normalizeImage(matterResult.data.image),
     content: matterResult.content,
   };
 }

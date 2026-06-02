@@ -23,6 +23,17 @@ export default function NewsPage() {
         ) : (
           news.map((post) => (
             <Link href={`/news/${post.slug}`} key={post.slug} className={styles.card}>
+              {post.image && (
+                <div className={styles.cardImageWrap}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className={styles.cardImage}
+                    loading="lazy"
+                  />
+                </div>
+              )}
               <div className={styles.cardContent}>
                 <span className={styles.date}>{post.date}</span>
                 <h2 className={styles.title}>{post.title}</h2>

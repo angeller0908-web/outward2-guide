@@ -20,6 +20,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${post.title} - Outward 2 Guide`,
     description: post.excerpt || `Read about ${post.title}`,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt || `Read about ${post.title}`,
+      type: 'article',
+      ...(post.image ? { images: [{ url: post.image }] } : {}),
+    },
+    ...(post.image
+      ? { twitter: { card: 'summary_large_image', images: [post.image] } }
+      : {}),
   };
 }
 
@@ -38,6 +47,12 @@ export default async function NewsPost({ params }: { params: Promise<{ slug: str
       </div>
       
       <article className={styles.article}>
+        {post.image && (
+          <div className={styles.banner}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={post.image} alt={post.title} className={styles.bannerImage} />
+          </div>
+        )}
         <header className={styles.header}>
           <time className={styles.date}>{post.date}</time>
           <h1 className={styles.title}>{post.title}</h1>
