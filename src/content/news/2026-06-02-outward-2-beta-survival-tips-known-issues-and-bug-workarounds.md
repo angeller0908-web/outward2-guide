@@ -2,6 +2,7 @@
 title: "Outward 2 Beta: Survival Tips, Known Issues, and Bug Workarounds"
 date: "2026-06-02"
 excerpt: "Navigating the Outward 2 closed beta can be brutal. Here are community-reported tips for dealing with the Hive Infestation bug, corruption status, missing items, and pitch-black nights."
+image: "2026-06-02-outward-2-beta-survival-tips-known-issues-and-bug-workarounds.webp"
 ---
 The *Outward 2* closed beta is currently live, throwing players back into a ruthless world of survival, disease management, and difficult combat. As with any early test build, the community is running into a mix of intentional hardcore mechanics and early-build technical issues. 
 

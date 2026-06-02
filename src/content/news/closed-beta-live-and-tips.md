@@ -2,6 +2,7 @@
 title: "Outward 2 Closed Beta is LIVE! 5 Essential Survival Tips & #ExploreAurai Contest"
 date: "2026-05-29"
 excerpt: "The wait is over! The Outward 2 Closed Beta has officially launched. Here are the 5 critical tips from the devs to survive your first hours, plus details on how to win an Early Access key."
+image: "closed-beta-live-and-tips.webp"
 ---
 
 The wait is over! As of today, the **Outward 2 Closed Beta is officially live**. Nine Dots Studio has opened the gates to Aurai once again, offering players a first look at the harsh realities and incredible adventures that await in the sequel. 

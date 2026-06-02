@@ -2,6 +2,7 @@
 title: "Outward 2 Beta: Critical Bugs, The 'Bird Friend' Stable Issue, and DLSS Crashes"
 date: 2026-05-29
 excerpt: "Participating in the Outward 2 closed beta? Read our PSA on the game-breaking stable bug that deletes your items, co-op encumbrance glitches, and how to navigate DLSS crashes on older GPUs."
+image: "2026-05-29-outward-2-beta-critical-bugs-the-bird-friend-stable-issue-and-dlss-cra.webp"
 ---
 
 *Outward 2* is currently in its closed beta testing phase. While reports indicate that the upcoming sequel will boast incredibly low system requirements on PC, the current build is quite rough around the edges. 

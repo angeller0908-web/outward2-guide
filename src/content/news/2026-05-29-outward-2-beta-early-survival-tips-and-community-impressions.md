@@ -2,6 +2,7 @@
 title: "Outward 2 Beta: Early Survival Tips and Community Impressions"
 date: 2026-05-29
 excerpt: "Struggling with overtuned bandits or getting lost on the map? Here are some crucial Outward 2 tips based on early beta testing and community feedback."
+image: "2026-05-29-outward-2-beta-early-survival-tips-and-community-impressions.webp"
 ---
 
 The *Outward 2* closed beta is officially in the hands of playtesters, and true to the franchise's roots, it is already handing out brutal beatdowns. If you managed to snag a Steam beta invite, you probably already noticed the excellent new character creator and solid tutorial. But once you step out into the actual world, things get rough quickly.

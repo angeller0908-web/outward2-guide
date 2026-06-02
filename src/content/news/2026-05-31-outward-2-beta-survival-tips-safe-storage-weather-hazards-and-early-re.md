@@ -2,6 +2,7 @@
 title: "Outward 2 Beta Survival Tips: Safe Storage, Weather Hazards, and Early Recipes"
 date: "2026-05-31"
 excerpt: "Struggling in the Outward 2 playtest? Here are community-tested tips on where to store your loot, how to survive the rain, and early crafting recipes."
+image: "2026-05-31-outward-2-beta-survival-tips-safe-storage-weather-hazards-and-early-re.webp"
 ---
 The *Outward 2* beta playtest is currently live, and players are quickly realizing that Aurai is just as unforgiving as ever. Between extreme weather conditions, brutal debuffs, and a lack of early-game storage, surviving the first few days requires careful planning. 
 

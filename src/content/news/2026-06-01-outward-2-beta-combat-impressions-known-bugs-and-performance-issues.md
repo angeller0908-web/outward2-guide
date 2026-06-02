@@ -2,6 +2,7 @@
 title: "Outward 2 Beta: Combat Impressions, Known Bugs, and Performance Issues"
 date: "2026-06-01"
 excerpt: "The Outward 2 beta is live, bringing a faster combat pace alongside some severe bugs and performance drops. Here is what you need to watch out for."
+image: "2026-06-01-outward-2-beta-combat-impressions-known-bugs-and-performance-issues.webp"
 ---
 The *Outward 2* beta is currently in the hands of players, giving us our first real taste of Nine Dots Studio's highly anticipated sequel. While the core survival RPG elements are intact, the early build is rough around the edges. Based on community feedback from the first few days, there are massive shifts in combat pacing, along with several performance issues and progression-blocking bugs. 
 

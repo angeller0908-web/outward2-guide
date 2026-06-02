@@ -2,6 +2,7 @@
 title: "Outward 2 Beta Survival Guide: Crucial Tips and Bugs to Avoid"
 date: 2026-05-29
 excerpt: "The Outward 2 closed beta is live. From missing pack mules to weird map orientations, here are the most important community-reported tips and bugs you need to know before stepping into the wilderness."
+image: "2026-05-29-outward-2-beta-survival-guide-crucial-tips-and-bugs-to-avoid.webp"
 ---
 
 The *Outward 2* closed beta is currently underway, giving players their first taste of Nine Dots Studio's brutal sequel. As expected from a pre-release build, the game offers a promising but highly volatile experience. While the combat depth and visual design have seen clear improvements, the current playtest is also packed with extreme difficulty spikes and run-ending bugs.

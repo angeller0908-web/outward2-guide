@@ -2,6 +2,7 @@
 title: "Outward 2 Beta: War Ribbon Bug and Mana Drain Issues Reported"
 date: "2026-05-30"
 excerpt: "Current Outward 2 playtesters are reporting invisible weapons and unexplained mana burn. Here's what we know about the latest beta build issues and new class mechanics."
+image: "2026-05-30-outward-2-beta-war-ribbon-bug-and-mana-drain-issues-reported.webp"
 ---
 The latest *Outward 2* beta playtest is currently live, with players actively sharing Steam invites across community forums. As more adventurers step out into Nine Dots Studio's harsh fantasy world, we are starting to see the first wave of community-reported mechanics, along with a few bugs you'll want to avoid.
 
