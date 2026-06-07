@@ -1,5 +1,5 @@
 ---
-title: Outward 2 Beta Updates: Quest Gates for Magic Access and Exercise Progression Hurdles
+title: "Outward 2 Beta Updates: Quest Gates for Magic Access and Exercise Progression Hurdles"
 date: "2026-06-07"
 excerpt: Recent Outward 2 beta patches introduce new progression limits on magical training, while players try to figure out the block impact exercise.
 image: "/images/news/2026-06-07-outward-2-beta-updates-quest-gates-for-magic-access-and-exercise-progr.webp"
