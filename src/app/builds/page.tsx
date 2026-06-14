@@ -5,6 +5,7 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'Build Planner | Outward 2 Guide',
   description: 'Plan your Outward 2 character build. Select skills, armor sets, weapons, and trainer combinations.',
+  robots: { index: false, follow: false },
 };
 
 export default function BuildsPage() {

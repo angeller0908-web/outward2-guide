@@ -118,7 +118,6 @@ const databaseCategories = [
   { name: 'Skills', count: '100+ Abilities', icon: '✨', iconClass: 'categoryIconSkills', href: '/database/skills' },
   { name: 'Crafting', count: '150+ Recipes', icon: '🧪', iconClass: 'categoryIconCrafting', href: '/database/crafting' },
   { name: 'Enemies', count: '50+ Creatures', icon: '👹', iconClass: 'categoryIconEnemies', href: '/database/enemies' },
-  { name: 'World Map', count: '3 Regions', icon: '🗺️', iconClass: 'categoryIconMap', href: '/map' },
 ];
 
 const features = [

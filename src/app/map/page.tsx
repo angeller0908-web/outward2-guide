@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     description:
       'Explore the regions of Aurai in Outward 2. Region overviews, concept maps, and interactive map coming at launch.',
   },
+  robots: { index: false, follow: false },
 };
 
 interface RegionData {

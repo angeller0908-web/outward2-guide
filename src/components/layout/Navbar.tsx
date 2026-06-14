@@ -14,9 +14,6 @@ const navLinks: NavLink[] = [
   { label: 'News', href: '/news' },
   { label: 'Guides', href: '/guides' },
   { label: 'Database', href: '/database' },
-  { label: 'Map', href: '/map' },
-  { label: 'Builds', href: '/builds' },
-  { label: 'Tools', href: '/tools' },
 ];
 
 interface NavbarProps {

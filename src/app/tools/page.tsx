@@ -5,6 +5,7 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'Calculators & Tools | Outward 2 Guide',
   description: 'Survival calculators, damage metrics, and crafting aids for Outward 2.',
+  robots: { index: false, follow: false },
 };
 
 export default function ToolsPage() {

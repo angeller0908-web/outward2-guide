@@ -25,22 +25,6 @@ const features = [
     href: '/database',
     linkLabel: 'Explore Database →',
   },
-  {
-    icon: '🗺️',
-    title: 'Interactive Map',
-    description:
-      'Navigate Aurai with our interactive world map. Find merchants, dungeons, resources, and hidden locations.',
-    href: '/map',
-    linkLabel: 'Open Map →',
-  },
-  {
-    icon: '🛡️',
-    title: 'Build Planner',
-    description:
-      'Plan your character build by combining trainer skills, armor sets, and weapons to create the ultimate survivor.',
-    href: '/builds',
-    linkLabel: 'Plan a Build →',
-  },
 ];
 
 export default function AboutPage() {
