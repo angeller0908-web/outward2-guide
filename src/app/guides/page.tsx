@@ -21,6 +21,18 @@ interface Guide {
 
 const allGuides: Guide[] = [
   {
+    slug: 'exercise-system-character-progression',
+    title: 'The Exercise System: How Character Progression Works',
+    description: 'Outward 2 ditches XP and levels entirely — your character grows by doing. Here\'s how exercises, breakthrough points, and the eight trainers work, and why your first three breakthroughs define your entire run.',
+    category: 'builds',
+    tags: ['Progression', 'Breakthroughs'],
+    icon: '💪',
+    readTime: 11,
+    date: 'June 15, 2026',
+    difficulty: 'intermediate',
+    featured: false,
+  },
+  {
     slug: 'everything-we-know',
     title: 'Outward 2: Everything We Know So Far',
     description: 'A comprehensive overview of all confirmed features, mechanics, gameplay systems, and changes from Outward 1. Your one-stop resource before launch day.',
