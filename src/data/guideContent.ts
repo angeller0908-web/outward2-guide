@@ -224,7 +224,79 @@ export const guideDetails: Record<string, GuideDetail> = {
     ]
   },
 
-  // 5. Battlemage Build
+  // 5. Exercise System / Character Progression
+  'exercise-system-character-progression': {
+    slug: 'exercise-system-character-progression',
+    title: 'The Exercise System: How Character Progression Works',
+    category: 'builds',
+    author: 'Sage Liora',
+    date: '2026-06-15',
+    readTime: 11,
+    difficulty: 'intermediate',
+    introduction: 'Outward 2 has no experience bar, no level-up screen, and no class selection menu. Your character grows by doing — fighting, crafting, surviving — through the Exercise System. Understanding this system before you stumble into it is the single most important preparation you can make, because your three Breakthrough Points cannot be refunded and will define your build for the entire run.',
+    sections: [
+      {
+        title: '1. What Is the Exercise System?',
+        paragraphs: [
+          'The Exercise System replaces traditional RPG leveling with a web of finite micro-achievements tied to how you actually play. Combat exercises reward you for using specific weapon types, landing heavy blows, and managing your stamina under pressure. Crafting exercises accumulate as you cook food, brew potions, and refine equipment. Survival exercises unlock as you endure disease, harsh weather, and sleep rough in the wild.',
+          'Completing exercises does two things simultaneously: it grants small passive stat bonuses — slightly more maximum stamina, a touch more physical defense, marginally faster mana regeneration — and it builds toward Breakthrough eligibility for a given trainer\'s skill tree. The game never tells you to play a certain way. It simply rewards the way you already prefer to play.',
+        ],
+        alertText: 'Exercises are designed to complete naturally over 10–15 hours of genuine play. If you find yourself repeating the same action to farm exercise progress, you are fighting the system rather than working with it.',
+        alertType: 'info',
+      },
+      {
+        title: '2. Breakthrough Points: Your Three Most Important Decisions',
+        paragraphs: [
+          'There are eight trainers scattered across Aurai. Every city contains one trainer, and every major region also hides a second trainer off the beaten path. You can purchase basic skills from any trainer simply by paying their silver fee — no Breakthrough required, and these basic skills are available to every character regardless of playstyle.',
+          'Spending a Breakthrough on a trainer unlocks their advanced skill tier: the deeper, more powerful abilities that define a build archetype. You have exactly three Breakthrough Points across the entire game. Choose three trainers out of eight to specialize with, and the other five remain at their basic tier permanently. This is the most consequential decision in Outward 2.',
+        ],
+        subList: [
+          'City trainers (one per city): straightforward to find, cover core disciplines such as melee combat, magic rituals, and survival techniques.',
+          'Region trainers (one hidden per major region): reward thorough exploration, and tend to offer more specialized or hybrid skill trees.',
+          'Basic skills: available to any character who pays the silver fee — no Breakthrough needed.',
+          'Advanced skills: locked behind spending one of your three Breakthroughs on that specific trainer.',
+        ],
+      },
+      {
+        title: '3. How to Earn and Spend a Breakthrough',
+        paragraphs: [
+          'Unlocking the right to spend a Breakthrough on a trainer requires three things working in parallel. First, you must complete the exercises most relevant to that trainer\'s discipline — a combat trainer\'s Breakthrough exercises center on weapon use and impact staggering; a magic trainer\'s center on casting rituals and mana management. Second, you must pay the trainer\'s Breakthrough fee in silver. Third, you must acquire and read the relevant training text that the trainer directs you toward.',
+          'This three-part gate is intentional design. The developers want each Breakthrough to feel earned through actual practice, not purchased on day one. You cannot buy your way into advanced skills before you have demonstrated fluency in the playstyle that unlocks them.',
+        ],
+        alertText: 'You do NOT need to spend a Breakthrough the moment you become eligible for one. You can bank all three and spend them deliberately after you have surveyed every trainer in the world.',
+        alertType: 'warning',
+      },
+      {
+        title: '4. The Trainer Tour: Find All Eight Before Committing',
+        paragraphs: [
+          'The best single piece of progression advice for Outward 2: find all eight trainers before spending a single Breakthrough. Visit every city trainer immediately upon arriving in each settlement — they are not hidden and will speak to you freely. Then, as you explore each region, actively hunt for the hidden trainer. Talk to locals, check caves, and investigate lore-heavy locations. Region trainers are placed in meaningful spots tied to the world\'s story, not randomized.',
+          'Each trainer shows you their basic skills (which you can buy immediately) and previews their Breakthrough tier. Comparing all eight options gives you the complete picture of what your character can become. Most players who regret their build in Outward 2 committed Breakthroughs before discovering what the hidden region trainers offered.',
+        ],
+      },
+      {
+        title: '5. Passive Bonuses vs. Trainer Skills: Two Separate Systems',
+        paragraphs: [
+          'Do not confuse exercise passive bonuses with trainer skills — they are distinct and stack with each other. Exercise passives accumulate automatically as you play: a few extra stamina points here, slightly better impact resistance there. These bonuses are modest individually but meaningful across a full run, and they are never locked behind Breakthrough costs.',
+          'Trainer skills — both basic and Breakthrough-tier — must be actively purchased and equipped in your skill slots. Basic trainer skills are affordable and worth picking up from any trainer whose style overlaps with your playstyle, even if you never spend a Breakthrough there. Think of basic skills as broad competencies that any adventurer can learn, and Breakthrough skills as the deep specializations that turn a competent wanderer into a focused expert.',
+        ],
+      },
+    ],
+    keyTakeaways: [
+      'The Exercise System replaces XP — your character grows by naturally playing your preferred style.',
+      'Eight trainers exist: one per city, one hidden per major region. Find all of them before committing.',
+      'You have exactly three Breakthrough Points for the entire game — treat each as a permanent character decision.',
+      'Earning a Breakthrough requires: completing relevant exercises + paying silver + reading the trainer\'s text.',
+      'Basic trainer skills are open to everyone; Breakthrough-tier skills are your three chosen specializations.',
+      'Exercise passive bonuses and trainer skills are separate systems — both compound across your run.',
+    ],
+    recommendedGear: {
+      weapons: ['Iron Sword', 'Iron Greataxe', 'Recurve Bow'],
+      armor: ["Traveler's Garment", 'Iron Plate Armor'],
+      skills: ['Evasion Step', 'War Cry', 'Spark'],
+    },
+  },
+
+  // 6. Battlemage Build
   'battlemage-build-guide': {
     slug: 'battlemage-build-guide',
     title: 'Build Guide: The Battlemage',

@@ -213,8 +213,21 @@ export const guides: GuideArticle[] = [
   },
 
   // ═══════════════════════════════════════════════════════════
-  //  BUILD GUIDES (3)
+  //  BUILD GUIDES (4)
   // ═══════════════════════════════════════════════════════════
+  {
+    slug: 'exercise-system-character-progression',
+    title: 'The Exercise System: How Character Progression Works',
+    description:
+      "Outward 2 ditches XP and levels entirely. Your character grows by doing — fighting, crafting, surviving. Here's how exercises, breakthrough points, and the eight trainers work, and why your first three breakthroughs will define your entire run.",
+    category: 'builds',
+    tags: ['exercise system', 'progression', 'breakthrough points', 'trainers', 'character building', 'passive skills'],
+    author: 'Sage Liora',
+    date: '2026-06-15',
+    readTime: 11,
+    featured: false,
+    difficulty: 'intermediate',
+  },
   {
     slug: 'battlemage-build-guide',
     title: 'Build Guide: The Battlemage',
