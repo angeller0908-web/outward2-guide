@@ -2,8 +2,21 @@ import type { GuideArticle } from '@/types/game';
 
 export const guides: GuideArticle[] = [
   // ═══════════════════════════════════════════════════════════
-  //  BEGINNER GUIDES (5)
+  //  BEGINNER GUIDES (6)
   // ═══════════════════════════════════════════════════════════
+  {
+    slug: 'starting-scenarios-guide',
+    title: "Starting Scenarios: Tramontane, Haboob, or Simeon's Bastion?",
+    description:
+      "Detailed breakdown of all three starting scenarios — their biomes, opening quests, and early gameplay differences. Plus a full guide to backgrounds and traits. Choose wisely before you begin.",
+    category: 'beginner',
+    tags: ['character creation', 'starting scenarios', 'new player', 'backgrounds', 'traits'],
+    author: 'Wanderer Kael',
+    date: '2026-06-15',
+    readTime: 9,
+    featured: false,
+    difficulty: 'beginner',
+  },
   {
     slug: 'getting-started-survival-basics',
     title: 'Getting Started: Survival Basics',

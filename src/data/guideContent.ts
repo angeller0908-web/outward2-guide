@@ -296,7 +296,88 @@ export const guideDetails: Record<string, GuideDetail> = {
     },
   },
 
-  // 6. Battlemage Build
+  // 6. Starting Scenarios
+  'starting-scenarios-guide': {
+    slug: 'starting-scenarios-guide',
+    title: "Starting Scenarios: Tramontane, Haboob, or Simeon's Bastion?",
+    category: 'beginner',
+    author: 'Wanderer Kael',
+    date: '2026-06-15',
+    readTime: 9,
+    difficulty: 'beginner',
+    introduction:
+      "Outward 2 begins not with a menu of stats to allocate, but with a choice that carries genuine weight: where does your story start? The three starting scenarios place you in different cities, different biomes, and different survival challenges from the first minute of play. Your pick also determines which region you explore first and which early trainers you encounter. Here is what each scenario actually means for how your run begins — based on confirmed details from the closed and open beta (May–June 2026).",
+    sections: [
+      {
+        title: '1. Tramontane — The Miner\'s Gamble',
+        paragraphs: [
+          'Your character is a miner hoping to strike it rich in the northern Gilded Mountains. Tramontane sits in a cold, mountainous biome where the harsh climate is an immediate enemy. Cold weather preparation is not optional here — if you set out without warming food and adequate layering, the mountain air will chip away at your health before any enemy touches you.',
+          'The miner background gives your character a working-class identity that opens specific dialogue paths with NPCs related to labor, trade, and frontier hardship. Of the three starting points, Tramontane is the most overtly "start from nothing in a brutal landscape" premise.',
+        ],
+        alertText:
+          'Tramontane is in a cold northern biome. Stock up on fire-making supplies and warming food before leaving the city — frostbite damage begins quickly in unprotected mountain weather.',
+        alertType: 'warning',
+      },
+      {
+        title: '2. Haboob — The Unexpected Homeowner',
+        paragraphs: [
+          'Your character is a lucky homeowner in the underground city of Haboob. The fresh start is short-lived — your newly acquired property comes with complications, and strange situations quickly force you out into the world. Haboob is an underground city set in an arid region, which means the climate enemy here is heat and dehydration, not cold and frostbite.',
+          'This scenario skews toward a more narrative entry point: you have an established (if troubled) domestic situation rather than nothing, and the early questline grows out of what goes wrong with that property. Pack accordingly for hot, dry conditions from the start.',
+        ],
+      },
+      {
+        title: "3. Simeon's Bastion — The Vagrant's Reset",
+        paragraphs: [
+          "Your character is a vagrant barely surviving in Simeon's Bastion. This is Outward 2's most tutorial-adjacent opening. Within minutes of beginning, thieves knock you out and strip your belongings — you wake in a local clinic with nothing, and your first quest is to track down those stolen items by asking around the city, with no map markers guiding you.",
+          "Simeon's Bastion sits in the La Rescapée region, a haunted forest landscape recovering from a century of Scourge invasions, populated by spirits and remnants of a fallen civilization. This is the scenario that was playable during the open beta, so it has the most community-documented early hours.",
+        ],
+        alertText:
+          "Simeon's Bastion was the only starting scenario available during the beta (May 26 – June 22, 2026). Details for Tramontane and Haboob openings are confirmed but less documented — expect discoveries after Early Access launches July 7.",
+        alertType: 'info',
+      },
+      {
+        title: '4. Backgrounds & Traits: Layered on Top',
+        paragraphs: [
+          'Scenario choice is only the first layer of character creation. You also choose one of eleven backgrounds — your social identity, which shapes starting gear, base stats, and NPC dialogue options throughout the entire game. Confirmed backgrounds include Aberdeen (a family lineage with its own reputation in Aurai) and Devout Worshipper of Elatt (affecting interactions with Holy Mission NPCs and religious questlines). The remaining nine backgrounds are not yet fully documented as of the beta.',
+          'On top of that, you choose from ten traits that tune your initial aptitudes. Three confirmed trait names are Hoarder, Gourmet, and Lone Wolf. Traits carry both positive and negative modifiers — none is a pure upgrade. The combination of scenario, background, and trait gives each run a meaningfully different starting identity even before you reach the first trainer.',
+        ],
+        subList: [
+          'Backgrounds (11 total): determine starting gear, stat spread, and dialogue options with NPCs. Confirmed: Aberdeen, Devout Worshipper of Elatt.',
+          'Traits (10 total): fine-tune initial aptitudes with tradeoffs — both positive and negative modifiers. Confirmed names: Hoarder, Gourmet, Lone Wolf.',
+          'Neither backgrounds nor traits are locked to a scenario — any background and trait can combine with any starting city.',
+        ],
+      },
+      {
+        title: "5. What the Beta Confirmed About Simeon's Bastion",
+        paragraphs: [
+          "Since the beta only offered Simeon's Bastion, players have the most hands-on detail about this opening. The thief-ambush tutorial is immediate: your gear is gone before you have a chance to get comfortable. Recovering stolen items requires genuine NPC investigation — talking to locals and reading the environment, not following a quest marker.",
+          "La Rescapée as a starting region offers 10+ dungeons and two trainers: the Levantine Engineer and the Mastat Cultist. Pack mules for item transport are available in the city; 150 silver pieces is an early cited cost. The region also features fire-hazard plants that require protective measures before engaging. Defeat scenarios in this region may drop you at monster-infested locations rather than safe respawn points — so overconfidence in early exploration carries real consequences.",
+        ],
+      },
+      {
+        title: '6. Which Starting Scenario Should You Pick?',
+        paragraphs: [
+          'All three scenarios lead into the same open world — your starting city does not lock you out of the other regions. The choice is about your first several hours of play, not a permanent restriction.',
+          "For a first playthrough, Simeon's Bastion is the most structured early objective: recovering your stolen gear is a clear goal that naturally teaches NPC investigation and city navigation without hand-holding. Tramontane offers the cleanest wilderness survival opening. Haboob fits players who want a narrative hook tied to a specific place before heading into the wild.",
+        ],
+      },
+    ],
+    keyTakeaways: [
+      'Tramontane (cold biome, northern mountains): you are a miner — bring warming food and fire supplies before leaving the city.',
+      'Haboob (hot biome, underground city): you are a homeowner embroiled in strange situations — pack for heat and dehydration.',
+      "Simeon's Bastion (La Rescapée, haunted forest): you are a vagrant; thieves strip your gear in the opening minutes and you must recover it by talking to NPCs.",
+      'Starting scenario determines your first region and biome — it does NOT lock you out of the rest of Aurai.',
+      '11 backgrounds and 10 traits layer on top of your scenario, affecting starting gear, stats, and dialogue throughout the whole game.',
+      "For beginners, Simeon's Bastion gives the clearest early objective and is the best-documented starting point from the beta.",
+    ],
+    recommendedGear: {
+      weapons: ['Iron Sword', 'Wooden Shield'],
+      armor: ["Traveler's Headwear", "Traveler's Garment", "Traveler's Boots"],
+      skills: ['Innate Fitness', 'Spark'],
+    },
+  },
+
+  // 7. Battlemage Build
   'battlemage-build-guide': {
     slug: 'battlemage-build-guide',
     title: 'Build Guide: The Battlemage',
