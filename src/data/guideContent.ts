@@ -377,7 +377,77 @@ export const guideDetails: Record<string, GuideDetail> = {
     },
   },
 
-  // 7. Battlemage Build
+  // 7. PC Requirements & Potato Mode
+  'pc-requirements-potato-mode': {
+    slug: 'pc-requirements-potato-mode',
+    title: 'System Requirements & Potato Mode Optimization',
+    category: 'beginner',
+    author: 'Wanderer Kael',
+    date: '2026-06-16',
+    readTime: 7,
+    difficulty: 'beginner',
+    introduction:
+      "One of Nine Dots Studio's stated design goals for Outward 2 is running on the widest possible range of hardware — and they backed it up on the Steam store page. The official minimum and recommended specs cover most modern systems, but there is also a developer-supported Potato Mode for rigs that fall below minimum. Here are the confirmed requirements as listed on Steam ahead of the July 7, 2026 Early Access launch, plus what Potato Mode actually means for older hardware.",
+    sections: [
+      {
+        title: '1. Minimum System Requirements',
+        paragraphs: [
+          "The minimum specification targets playable performance at lower settings. Per the Steam store page, you need at least Windows 10, an AMD Ryzen 3 1300X processor, an NVIDIA GeForce GTX 960 graphics card, and 8 GB of RAM. Storage requirement is 25 GB.",
+          "If your CPU and GPU are both close to these minimums, expect to run at 720p with reduced settings. Outward 2's survival logic — hunger ticks, weather calculations, NPC pathfinding — puts moderate load on the CPU even before rendering, so make sure your processor does not bottleneck your GPU.",
+        ],
+        subList: [
+          'OS: Windows 10',
+          'Processor: AMD Ryzen 3 1300X',
+          'Memory: 8 GB RAM',
+          'Graphics: NVIDIA GeForce GTX 960',
+          'Storage: 25 GB available space',
+        ],
+      },
+      {
+        title: '2. Recommended System Requirements',
+        paragraphs: [
+          'The recommended specification is where Nine Dots expects the game to perform comfortably at higher resolutions. This tier calls for Windows 11, an AMD Ryzen 5 5600X processor, an NVIDIA GeForce RTX 3060 graphics card, and 16 GB of RAM — with the same 25 GB storage.',
+          'The RTX 3060 is a solid mid-range card that handles 1080p to 1440p gaming comfortably. If your GPU is in this range, you should be able to push resolution higher without significant frame drops during standard exploration.',
+        ],
+        subList: [
+          'OS: Windows 11',
+          'Processor: AMD Ryzen 5 5600X',
+          'Memory: 16 GB RAM',
+          'Graphics: NVIDIA GeForce RTX 3060',
+          'Storage: 25 GB available space',
+        ],
+      },
+      {
+        title: '3. Potato Mode: Playing Below Minimum',
+        paragraphs: [
+          'Nine Dots explicitly acknowledges hardware below the minimum on the Steam store page: "You can also go below Minimum and play our Potato mode. We don\'t guarantee a 100% gameplay parity but it should be playable." This is not a vague promise — Potato Mode is a named preset the developers tested and committed to supporting.',
+          'The studio revealed Potato Mode with a humorous marketing trailer featuring a fictional "Mr. Potato" character, but the feature itself is real. If your PC cannot meet the GTX 960 / Ryzen 3 1300X minimum, Potato Mode reduces rendering quality to keep the game running. Expect lower frame rates and reduced visual fidelity — but a functional game.',
+        ],
+        alertText:
+          'Nine Dots says Potato Mode has no "100% gameplay parity" guarantee. Core mechanics — combat, crafting, survival — work fully; certain visual effects and scene complexity may be reduced.',
+        alertType: 'info',
+      },
+      {
+        title: '4. Beta Performance & What to Expect at Launch',
+        paragraphs: [
+          'The open beta (June 10–22, 2026) shipped with acknowledged optimization issues and inconsistent frame rates. This is normal for pre-Early Access builds — significant performance work typically happens in the weeks leading up to and immediately after launch.',
+          'If you tested the open beta and found performance disappointing on your hardware, wait until after the July 7 Early Access launch before drawing conclusions. Beta builds rarely reflect finished Early Access performance.',
+        ],
+        alertText:
+          'Open beta performance (June 10–22, 2026) is not representative of the July 7 Early Access build. Nine Dots is actively optimizing based on beta player hardware reports.',
+        alertType: 'warning',
+      },
+    ],
+    keyTakeaways: [
+      'Minimum (Steam-confirmed): Windows 10, Ryzen 3 1300X, GTX 960, 8 GB RAM, 25 GB storage.',
+      'Recommended (Steam-confirmed): Windows 11, Ryzen 5 5600X, RTX 3060, 16 GB RAM, 25 GB storage.',
+      'Potato Mode is developer-supported for below-minimum hardware — no parity guarantee, but confirmed playable.',
+      'Both tiers require only 25 GB storage — a lightweight install by modern standards.',
+      'Open beta had optimization issues; Early Access on July 7 should perform noticeably better.',
+    ],
+  },
+
+  // 8. Battlemage Build
   'battlemage-build-guide': {
     slug: 'battlemage-build-guide',
     title: 'Build Guide: The Battlemage',

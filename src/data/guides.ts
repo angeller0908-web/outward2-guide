@@ -5,6 +5,19 @@ export const guides: GuideArticle[] = [
   //  BEGINNER GUIDES (6)
   // ═══════════════════════════════════════════════════════════
   {
+    slug: 'pc-requirements-potato-mode',
+    title: 'System Requirements & Potato Mode Optimization',
+    description:
+      'The confirmed minimum and recommended specs from the Steam store page, plus what Potato Mode actually means for below-minimum hardware ahead of the July 7, 2026 Early Access launch.',
+    category: 'beginner',
+    tags: ['pc specs', 'potato mode', 'performance', 'hardware'],
+    author: 'Wanderer Kael',
+    date: '2026-06-16',
+    readTime: 7,
+    featured: false,
+    difficulty: 'beginner',
+  },
+  {
     slug: 'starting-scenarios-guide',
     title: "Starting Scenarios: Tramontane, Haboob, or Simeon's Bastion?",
     description:
