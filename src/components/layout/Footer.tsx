@@ -9,10 +9,10 @@ const quickLinks = [
 ];
 
 const guideLinks = [
-  { label: 'Beginner Walkthrough', href: '/guides/beginner' },
-  { label: 'Boss Strategies', href: '/guides/bosses' },
-  { label: 'Skill Trees', href: '/guides/skills' },
-  { label: 'Quest Lines', href: '/guides/quests' },
+  { label: 'Beginner Walkthrough', href: '/guides?category=beginner' },
+  { label: 'Boss Strategies', href: '/database/enemies' },
+  { label: 'Skill Trees', href: '/database/skills' },
+  { label: 'Quest Lines', href: '/guides?category=quests' },
 ];
 
 const databaseLinks = [

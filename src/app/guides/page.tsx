@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from './page.module.css';
 
@@ -305,6 +305,14 @@ const difficultyClass: Record<string, string> = {
 
 export default function GuidesPage() {
   const [activeFilter, setActiveFilter] = useState<GuideCategory>('all');
+
+  // Allow deep-linking a category filter via ?category= (e.g. from the footer)
+  useEffect(() => {
+    const cat = new URLSearchParams(window.location.search).get('category');
+    if (cat && filterCategories.some((c) => c.key === cat)) {
+      setActiveFilter(cat as GuideCategory);
+    }
+  }, []);
 
   const filteredGuides = activeFilter === 'all'
     ? allGuides
