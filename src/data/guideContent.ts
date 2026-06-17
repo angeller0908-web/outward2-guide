@@ -447,7 +447,90 @@ export const guideDetails: Record<string, GuideDetail> = {
     ],
   },
 
-  // 8. Battlemage Build
+  // 8. Defeat Scenarios
+  'defeat-scenarios-guide': {
+    slug: 'defeat-scenarios-guide',
+    title: 'What Happens When You Die? Defeat Scenarios Explained',
+    category: 'survival',
+    author: 'Loremaster Theron',
+    date: '2026-06-17',
+    readTime: 8,
+    difficulty: 'beginner',
+    introduction:
+      "Outward 2 has no game-over screen. When you fall in combat, you do not simply restart from a checkpoint — the world keeps moving, your autosave locks in the defeat, and you wake up somewhere with consequences attached. What happens next is not random: circumstances shape which of several failure scenarios plays out. Here is what the open beta (May–June 2026) confirmed about dying in Aurai and how to recover from it.",
+    sections: [
+      {
+        title: '1. The Autosave Lock: Why Defeat Sticks',
+        paragraphs: [
+          'Outward 2 autosaves constantly. There are no manual save slots, no system to reload a file from before the moment you fell. Nine Dots Studio designed the game around the principle that you live with your failures rather than undo them. This is not a bug or oversight — it is the deliberate design tension the entire game is built on.',
+          'Once you are defeated, the outcome is written to your save. What changes is which scenario plays out: the game selects from a set of failure states based on where you fell, who is nearby, and how badly the fight went. The best preparation is understanding what those scenarios are before they happen to you.',
+        ],
+        alertText:
+          'There is no save-scumming in Outward 2. Quitting and reloading the game after a defeat returns you to the same defeat outcome — the autosave captured it. Plan every expedition as if your life depends on it, because it does.',
+        alertType: 'danger',
+      },
+      {
+        title: '2. Confirmed Defeat Scenarios (Open Beta)',
+        paragraphs: [
+          'The beta documented at least three distinct defeat outcomes. The first is the harshest: you are robbed and abandoned, and when you wake up, your backpack is gone — left somewhere dangerous, potentially at the top of a cliff or deep in enemy territory. Your silver is taken. Recovering your gear becomes its own mini-quest, and you undertake it in a weakened state.',
+          'The second scenario is comparatively merciful: you are dragged back to the inn. Someone hauls you to safety, and you wake up indoors, alive, and with your pack nearby. You may owe a debt or find that time has passed, but the immediate danger is resolved.',
+          'A third referenced scenario involves a kind traveler — an NPC who finds you in the wild and gets you back on your feet. The traveler may not be entirely selfless, and obligations or consequences may follow from this rescue. Sources note the full set of scenarios is described as "a handful," meaning additional outcomes may exist beyond what the beta publicly documented.',
+        ],
+        subList: [
+          'Robbed & Abandoned: worst outcome — bag left in dangerous territory, silver taken, you wake with nothing.',
+          'Dragged to the Inn: safer outcome — woken up indoors, bag retrievable, but time has passed.',
+          'Kind Traveler: rescued by a wandering NPC — obligations or consequences may follow.',
+          '(Additional scenarios may exist — beta only covered Simeon\'s Bastion region.)',
+        ],
+        alertText:
+          "Which scenario plays out appears to depend on circumstances — where you fell, how far you are from civilization, and who is in the area. Falling deep in a dungeon is a worse roll than falling near a road.",
+        alertType: 'info',
+      },
+      {
+        title: '3. Injuries and Fractures: The Lingering Cost',
+        paragraphs: [
+          'Dying or taking severe damage in Outward 2 can inflict an injury that persists after you wake up. Fractures are the most significant: a fractured limb limits your movement for many real-time minutes, slowing your walk and impairing your ability to dodge and sprint until the injury heals.',
+          'This is where Outward 2 diverges sharply from most RPGs. Sleeping and resting do not cure fractures. The debuff does not disappear on its own in a reasonable time. The only effective treatment is a craftable splint, which when applied significantly shortens the recovery time. Going out on the next expedition with an untreated fracture makes any subsequent combat dramatically more dangerous — you cannot move, dodge, or retreat at full speed.',
+        ],
+        alertText:
+          'Always carry at least one splint before heading into dangerous territory. An untreated fracture from one defeat makes the next encounter far more likely to produce a second defeat, creating a spiral that is hard to break without preparation.',
+        alertType: 'warning',
+      },
+      {
+        title: '4. Your Backpack: Where It Goes When You Fall',
+        paragraphs: [
+          'In Outward 2, your backpack stays where your body was when you fell — it does not teleport with you to the inn or respawn point. If the robbed-and-abandoned scenario triggers, your pack may be in hostile territory, requiring you to fight back into a dangerous area while already weakened.',
+          'This mechanic fundamentally changes how you should approach expeditions. Before entering a dungeon or a high-risk encounter, consider what you are carrying and whether you could afford to lose it. Some players leave cached supplies near dungeon entrances so a post-defeat retrieval does not mean risking everything twice.',
+        ],
+      },
+      {
+        title: '5. Hardcore Mode: When Death Is Actually Death',
+        paragraphs: [
+          'For players who find standard defeat consequences insufficiently punishing, Hardcore Mode adds a 20% chance per defeat that your save file is permanently deleted. This does not just mean a bad scenario plays out — it means your entire run ends, permanently, one time in five that you fall.',
+          'Hardcore Mode is intended for experienced players who have completed at least one full run and understand the game\'s systems well enough to avoid accidental defeats. It is emphatically not recommended for a first playthrough. The base defeat system already carries significant stakes — Hardcore is for players who want the maximum possible cost for every mistake.',
+        ],
+        alertText:
+          'Hardcore Mode permanently deletes your save on a 20% chance per defeat. Back up your save files externally if you attempt this mode and want insurance — though some players view any save backup as defeating the spirit of the mode.',
+        alertType: 'danger',
+      },
+    ],
+    keyTakeaways: [
+      'Outward 2 autosaves constantly — there is no save-scumming out of a defeat, ever.',
+      'At least three defeat scenarios confirmed from the beta: robbed & abandoned, dragged to the inn, and rescued by a kind traveler.',
+      'Falling near civilization tends to produce better outcomes than falling deep in a dungeon.',
+      'Fractures from severe injury limit movement for many real-time minutes — rest does NOT cure them.',
+      'Craft and carry a splint before dangerous expeditions; it is the only way to shorten fracture recovery.',
+      'Your backpack stays where you fell — plan retrieval routes if heading into high-risk territory.',
+      'Hardcore Mode: 20% chance of permanent save deletion per defeat — for experienced players only.',
+    ],
+    recommendedGear: {
+      weapons: ['Iron Sword', 'Wooden Shield'],
+      armor: ["Traveler's Garment", "Traveler's Boots"],
+      skills: ['Innate Fitness', 'Evasion Step'],
+    },
+  },
+
+  // 9. Battlemage Build
   'battlemage-build-guide': {
     slug: 'battlemage-build-guide',
     title: 'Build Guide: The Battlemage',
