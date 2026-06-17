@@ -3,6 +3,12 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import styles from './SearchModal.module.css';
+import { guides } from '@/data/guides';
+import { weapons } from '@/data/weapons';
+import { armor } from '@/data/armor';
+import { skills } from '@/data/skills';
+import { enemies } from '@/data/enemies';
+import { recipes } from '@/data/recipes';
 
 interface SearchResult {
   id: string;
@@ -18,85 +24,74 @@ interface SearchModalProps {
 }
 
 const recentSearches = [
-  'Runic Sword',
-  'Mage build',
-  'Vendavel boss',
-  'Alchemy recipes',
+  'Potato Mode',
+  'Exercise System',
+  'Iron Sword',
+  'Shield Bash',
 ];
 
 const popularSearches = [
-  'Best beginner build',
-  'How to get backpack',
-  'Map locations',
-  'Co-op guide',
+  'Starting Scenarios',
+  'Armor',
+  'Crafting',
+  'Highwayman',
 ];
 
-const dummyResults: SearchResult[] = [
-  {
-    id: '1',
-    title: 'Beginner Walkthrough',
+// Real search index built from the site's actual guide + database content.
+// Database entries have no per-item detail route, so they link to their
+// category page (which server-renders the entry name).
+const searchIndex: SearchResult[] = [
+  ...guides.map((g) => ({
+    id: `guide-${g.slug}`,
+    title: g.title,
     category: 'Guides',
-    href: '/guides/beginner',
-    description: 'Everything you need to know to start your journey in Aurai.',
-  },
-  {
-    id: '2',
-    title: 'Runic Sword',
+    href: `/guides/${g.slug}`,
+    description: g.description,
+  })),
+  ...weapons.map((w) => ({
+    id: `weapon-${w.id}`,
+    title: w.name,
     category: 'Weapons',
-    href: '/database/weapons/runic-sword',
-    description: 'A powerful magical sword that scales with mana.',
-  },
-  {
-    id: '3',
-    title: 'Blue Sand Armor',
+    href: '/database/weapons',
+    description: w.description,
+  })),
+  ...armor.map((a) => ({
+    id: `armor-${a.id}`,
+    title: a.name,
     category: 'Armor',
-    href: '/database/armor/blue-sand-armor',
-    description: 'Medium armor with excellent magic resistance.',
-  },
-  {
-    id: '4',
-    title: 'Fire Sigil Build',
-    category: 'Builds',
-    href: '/builds/fire-sigil',
-    description: 'Devastating fire mage build using Sigil of Fire.',
-  },
-  {
-    id: '5',
-    title: 'Vendavel Fortress',
-    category: 'Locations',
-    href: '/map/vendavel-fortress',
-    description: 'A bandit stronghold in the Chersonese region.',
-  },
-  {
-    id: '6',
-    title: 'Alchemy Recipes',
-    category: 'Guides',
-    href: '/guides/alchemy',
-    description: 'Complete guide to all alchemy recipes and potions.',
-  },
-  {
-    id: '7',
-    title: 'Horror Halberd',
-    category: 'Weapons',
-    href: '/database/weapons/horror-halberd',
-    description: 'Two-handed polearm infused with dark energy.',
-  },
-  {
-    id: '8',
-    title: 'Boss Strategies Guide',
-    category: 'Guides',
-    href: '/guides/bosses',
-    description: 'Tips and strategies for every boss encounter.',
-  },
+    href: '/database/armor',
+    description: a.description,
+  })),
+  ...skills.map((s) => ({
+    id: `skill-${s.id}`,
+    title: s.name,
+    category: 'Skills',
+    href: '/database/skills',
+    description: s.description,
+  })),
+  ...enemies.map((e) => ({
+    id: `enemy-${e.id}`,
+    title: e.name,
+    category: 'Enemies',
+    href: '/database/enemies',
+    description: e.description,
+  })),
+  ...recipes.map((r) => ({
+    id: `recipe-${r.id}`,
+    title: r.name,
+    category: 'Crafting',
+    href: '/database/crafting',
+    description: r.description,
+  })),
 ];
 
 const categoryIcons: Record<string, string> = {
   Guides: '📖',
   Weapons: '⚔️',
   Armor: '🛡️',
-  Builds: '⚡',
-  Locations: '🗺️',
-  Items: '🎒',
+  Skills: '✨',
+  Enemies: '👹',
+  Crafting: '🧪',
 };
 
 export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
@@ -105,14 +100,22 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
   const inputRef = useRef<HTMLInputElement>(null);
   const resultsRef = useRef<HTMLDivElement>(null);
 
-  // Filter results based on query
-  const filteredResults = query.length > 0
-    ? dummyResults.filter(
-        (r) =>
-          r.title.toLowerCase().includes(query.toLowerCase()) ||
-          r.category.toLowerCase().includes(query.toLowerCase()) ||
-          r.description?.toLowerCase().includes(query.toLowerCase())
-      )
+  // Filter results based on query (title matches ranked first, capped for sanity)
+  const q = query.trim().toLowerCase();
+  const filteredResults = q.length > 0
+    ? searchIndex
+        .filter(
+          (r) =>
+            r.title.toLowerCase().includes(q) ||
+            r.category.toLowerCase().includes(q) ||
+            r.description?.toLowerCase().includes(q)
+        )
+        .sort(
+          (a, b) =>
+            (a.title.toLowerCase().includes(q) ? 0 : 1) -
+            (b.title.toLowerCase().includes(q) ? 0 : 1)
+        )
+        .slice(0, 24)
     : [];
 
   // Group results by category
