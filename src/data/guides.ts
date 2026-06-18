@@ -8,11 +8,11 @@ export const guides: GuideArticle[] = [
     slug: 'pc-requirements-potato-mode',
     title: 'System Requirements & Potato Mode Optimization',
     description:
-      'The confirmed minimum and recommended specs from the Steam store page, plus what Potato Mode actually means for below-minimum hardware ahead of the July 7, 2026 Early Access launch.',
+      'The confirmed minimum and recommended specs from the Steam store page, plus what Potato Mode actually means for below-minimum hardware. Updated after the Early Access delay from July 7, 2026 to 2027.',
     category: 'beginner',
     tags: ['pc specs', 'potato mode', 'performance', 'hardware'],
     author: 'Wanderer Kael',
-    date: '2026-06-16',
+    date: '2026-06-18',
     readTime: 7,
     featured: false,
     difficulty: 'beginner',

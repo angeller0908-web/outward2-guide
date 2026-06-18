@@ -332,7 +332,7 @@ export const guideDetails: Record<string, GuideDetail> = {
           "Simeon's Bastion sits in the La Rescapée region, a haunted forest landscape recovering from a century of Scourge invasions, populated by spirits and remnants of a fallen civilization. This is the scenario that was playable during the open beta, so it has the most community-documented early hours.",
         ],
         alertText:
-          "Simeon's Bastion was the only starting scenario available during the beta (May 26 – June 22, 2026). Details for Tramontane and Haboob openings are confirmed but less documented — expect discoveries after Early Access launches July 7.",
+          "Simeon's Bastion was the only starting scenario available during the open beta (May 26 – June 22, 2026). Details for Tramontane and Haboob openings are confirmed but less documented — more will be documented once Early Access launches. Note: Early Access was delayed from July 7, 2026; new date to be announced by Nine Dots Studio.",
         alertType: 'info',
       },
       {
@@ -383,11 +383,11 @@ export const guideDetails: Record<string, GuideDetail> = {
     title: 'System Requirements & Potato Mode Optimization',
     category: 'beginner',
     author: 'Wanderer Kael',
-    date: '2026-06-16',
+    date: '2026-06-18',
     readTime: 7,
     difficulty: 'beginner',
     introduction:
-      "One of Nine Dots Studio's stated design goals for Outward 2 is running on the widest possible range of hardware — and they backed it up on the Steam store page. The official minimum and recommended specs cover most modern systems, but there is also a developer-supported Potato Mode for rigs that fall below minimum. Here are the confirmed requirements as listed on Steam ahead of the July 7, 2026 Early Access launch, plus what Potato Mode actually means for older hardware.",
+      "One of Nine Dots Studio's stated design goals for Outward 2 is running on the widest possible range of hardware — and they backed it up on the Steam store page. The official minimum and recommended specs cover most modern systems, but there is also a developer-supported Potato Mode for rigs that fall below minimum. Here are the confirmed requirements as listed on Steam, plus what Potato Mode actually means for older hardware. Early Access was originally planned for July 7, 2026 but has been delayed to 2027 — the specs below remain valid.",
     sections: [
       {
         title: '1. Minimum System Requirements',
@@ -431,10 +431,10 @@ export const guideDetails: Record<string, GuideDetail> = {
         title: '4. Beta Performance & What to Expect at Launch',
         paragraphs: [
           'The open beta (June 10–22, 2026) shipped with acknowledged optimization issues and inconsistent frame rates. This is normal for pre-Early Access builds — significant performance work typically happens in the weeks leading up to and immediately after launch.',
-          'If you tested the open beta and found performance disappointing on your hardware, wait until after the July 7 Early Access launch before drawing conclusions. Beta builds rarely reflect finished Early Access performance.',
+          'If you tested the open beta and found performance disappointing on your hardware, wait until Early Access launches (2027) before drawing final conclusions. Beta builds rarely reflect finished Early Access performance.',
         ],
         alertText:
-          'Open beta performance (June 10–22, 2026) is not representative of the July 7 Early Access build. Nine Dots is actively optimizing based on beta player hardware reports.',
+          'Open beta performance (June 10–22, 2026) is not representative of the Early Access build. Nine Dots is actively optimizing based on beta player hardware reports. Early Access has been delayed to 2027.',
         alertType: 'warning',
       },
     ],
@@ -443,7 +443,7 @@ export const guideDetails: Record<string, GuideDetail> = {
       'Recommended (Steam-confirmed): Windows 11, Ryzen 5 5600X, RTX 3060, 16 GB RAM, 25 GB storage.',
       'Potato Mode is developer-supported for below-minimum hardware — no parity guarantee, but confirmed playable.',
       'Both tiers require only 25 GB storage — a lightweight install by modern standards.',
-      'Open beta had optimization issues; Early Access on July 7 should perform noticeably better.',
+      'Open beta had optimization issues; Early Access (2027, new date TBA) should perform noticeably better after continued optimization.',
     ],
   },
 
