@@ -1,46 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from './page.module.css';
-
-// Countdown timer component
-function CountdownTimer() {
-  const releaseDate = new Date('2026-07-07T00:00:00Z').getTime();
-  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      const now = Date.now();
-      const diff = releaseDate - now;
-      if (diff <= 0) {
-        clearInterval(timer);
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-        return;
-      }
-      setTimeLeft({
-        days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((diff / (1000 * 60)) % 60),
-        seconds: Math.floor((diff / 1000) % 60),
-      });
-    }, 1000);
-    return () => clearInterval(timer);
-  }, [releaseDate]);
-
-  return (
-    <div className={styles.countdownGrid}>
-      {Object.entries(timeLeft).map(([unit, value]) => (
-        <div key={unit} className={styles.countdownItem}>
-          <div className={styles.countdownNumber}>
-            {String(value).padStart(2, '0')}
-          </div>
-          <span className={styles.countdownUnit}>{unit}</span>
-        </div>
-      ))}
-    </div>
-  );
-}
 
 // Featured guides data
 const featuredGuides = [
@@ -144,9 +105,6 @@ const features = [
 ];
 
 export default function HomePage() {
-  const releaseDate = new Date('2026-07-07T00:00:00Z');
-  const isReleased = Date.now() >= releaseDate.getTime();
-
   return (
     <>
       {/* Hero Section */}
@@ -155,7 +113,7 @@ export default function HomePage() {
         <div className={styles.heroContent}>
           <div className={styles.heroTagline}>
             <span className={styles.heroPulse} />
-            {isReleased ? 'Outward 2 is OUT NOW' : 'Launching July 7, 2026'}
+            Early Access coming 2027
           </div>
           <h1 className={styles.heroTitle}>
             Your Ultimate{' '}
@@ -176,16 +134,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Countdown Timer */}
-      {!isReleased && (
-        <section className={styles.countdown} id="countdown">
-          <div className="container">
-            <div className={styles.countdownLabel}>⏱ Countdown to Launch</div>
-            <CountdownTimer />
-          </div>
-        </section>
-      )}
 
       {/* Stats Bar */}
       <div className={styles.statsBar}>

@@ -107,8 +107,8 @@ export default function MapPage() {
         </h1>
         <p className={styles.subtitle}>
           Outward 2 features four distinct regions, each with unique biomes, cities, and
-          dangers. Explore the known world below — full interactive map launches with the game
-          on July 7, 2026.
+          dangers. Explore the known world below — the full interactive map launches with the
+          game when Early Access arrives in 2027.
         </p>
       </header>
 
@@ -177,7 +177,7 @@ export default function MapPage() {
         <h2 className={styles.comingSoonTitle}>Full Interactive Map — Coming at Launch</h2>
         <p className={styles.comingSoonDesc}>
           We&apos;re building a complete interactive map with toggleable markers, powered by
-          real in-game data. It will be available when Outward 2 launches on July 7, 2026.
+          real in-game data. It will be available when Outward 2 Early Access arrives in 2027.
         </p>
         <div className={styles.comingSoonFeatures}>
           <div className={styles.comingSoonFeature}>
