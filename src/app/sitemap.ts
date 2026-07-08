@@ -65,5 +65,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticUrls, ...guideUrls];
+  // 4. Regional map detail pages
+  const mapRegionUrls = ['tramontane', 'haboob', 'simeons-bastion', 'gates-of-catharsis'].map(
+    (regionId) => ({
+      url: `${baseUrl}/map/${regionId}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    })
+  );
+
+  return [...staticUrls, ...guideUrls, ...mapRegionUrls];
 }

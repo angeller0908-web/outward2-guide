@@ -1,5 +1,5 @@
 /* ============================================================
-   Map Page — Region Explorer
+   Map Page v2 — Region Explorer + Detail Entry Points
    ============================================================ */
 
 .page {
@@ -39,9 +39,22 @@
 .subtitle {
   font-size: 1.05rem;
   color: var(--text-secondary);
-  max-width: 640px;
+  max-width: 680px;
   margin: 0 auto;
   line-height: 1.6;
+}
+
+.headerMeta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  background: rgba(196, 168, 98, 0.08);
+  border: 1px solid var(--border-default);
 }
 
 /* ---- Region Grid ---- */
@@ -60,13 +73,20 @@
   background: var(--card-bg);
   border: 1px solid var(--border-color);
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
-  cursor: default;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
 }
 
 .regionCard:hover {
   transform: translateY(-6px);
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.35);
   border-color: var(--accent-gold);
+}
+
+.regionCard:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
 /* ---- Card Image ---- */
@@ -94,6 +114,29 @@
   inset: 0;
   background: linear-gradient(to top, rgba(10, 10, 18, 0.92) 0%, rgba(10, 10, 18, 0.3) 50%, transparent 100%);
   pointer-events: none;
+}
+
+.regionImageOverlay::after {
+  content: 'Explore Region →';
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  opacity: 0;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #0d1117;
+  background: var(--primary-light);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  white-space: nowrap;
+}
+
+.regionCard:hover .regionImageOverlay::after {
+  opacity: 1;
+  transform: translate(-50%, calc(50% - 8px));
 }
 
 /* ---- Card Body ---- */
@@ -192,7 +235,68 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* ---- ArtStation Reference ---- */
+/* ---- Resources Section ---- */
+
+.resourcesSection {
+  margin-bottom: 3.5rem;
+}
+
+.resourcesTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+.resourcesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.resourceCard {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  text-decoration: none;
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.resourceCard:hover {
+  transform: translateY(-3px);
+  border-color: var(--border-hover);
+  background: var(--bg-elevated);
+}
+
+.resourceIcon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.resourceContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.resourceName {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.resourceDesc {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+/* ---- ArtStation References ---- */
 
 .artStationSection {
   text-align: center;
@@ -245,7 +349,7 @@
   transform: translateY(-2px);
 }
 
-/* ---- Coming Soon Banner ---- */
+/* ---- Coming Soon — Interactive Map ---- */
 
 .comingSoon {
   text-align: center;
@@ -304,6 +408,12 @@
 }
 
 /* ---- Responsive ---- */
+
+@media (max-width: 900px) {
+  .resourcesGrid {
+    grid-template-columns: 1fr;
+  }
+}
 
 @media (max-width: 768px) {
   .page {
